@@ -28,15 +28,15 @@ confirmButton.onclick = function(){
         //var usercount = firebase.database().val();
         var database = firebase.database();
         var encodedImg = database.ref("user");
-        var encodedImg2 = database.ref("userCount");
+        // var encodedImg2 = database.ref("userCount");
         var result = encodedImg.push({
             username :username,
             password :password1,
             coins : '0'
         });
-        var countResult = encodedImg2.push({
-            count: 0
-        });
+        // var countResult = encodedImg2.push({
+        //     count: 0
+        // });
     }else{
         alert("This email already exist.");
     }
